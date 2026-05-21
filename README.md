@@ -1,12 +1,12 @@
 # Wissal Saidi Portfolio
 
-A fast, elegant Astro portfolio for Wissal Saidi, designed for deployment on Netlify at `wissalsaidi.com`.
+A fast, elegant Astro portfolio for Wissal Saidi, a junior frontend developer based in Morocco and open to remote opportunities. The site is static, SEO-friendly, and ready for Netlify deployment at `wissalsaidi.com`.
 
 ## Tech Stack
 
 - Astro
-- TypeScript
 - Static content
+- Netlify hosting
 - No backend
 - No database
 
@@ -33,7 +33,17 @@ npm run preview
 3. Use these settings:
    - Build command: `npm run build`
    - Publish directory: `dist`
-4. Add the custom domain: `wissalsaidi.com`.
+4. Netlify reads `netlify.toml`, including the Node version and security headers.
+
+## Custom Domain
+
+To connect `wissalsaidi.com`:
+
+1. In Netlify, open Site settings.
+2. Go to Domain management.
+3. Add `wissalsaidi.com` as the custom domain.
+4. Update DNS records at the domain provider using Netlify's instructions.
+5. Enable HTTPS after DNS propagation.
 
 ## Editing Content
 
@@ -41,12 +51,22 @@ Most portfolio content lives in:
 
 - `src/data/profile.ts`
 
-Update skills, projects, social links, and contact details there.
+Update the profile, social links, skills, remote collaboration strengths, and projects there.
 
-## Resume
+## Updating Projects
 
-The resume button points to `/resume-wissal-saidi.pdf`. Add the real PDF to:
+Edit the `projects` array in `src/data/profile.ts`. Each project supports:
+
+- `title`
+- `year`
+- `category`
+- `description`
+- `technologies`
+
+## Replacing The CV
+
+The Download CV buttons point to:
 
 - `public/resume-wissal-saidi.pdf`
 
-The current file is intentionally a placeholder.
+Replace that file with the final PDF CV while keeping the same filename.

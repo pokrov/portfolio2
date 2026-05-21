@@ -1,0 +1,20 @@
+---
+import { remoteStrengths } from '@/data/profile';
+import SectionHeader from './SectionHeader.astro';
+---
+
+<section class="content-band">
+  <SectionHeader
+    eyebrow="Remote work"
+    title="Ready for remote collaboration"
+    text="I'm comfortable working with clear tasks, deadlines, feedback, and remote communication. I can support teams with frontend implementation, UI improvements, responsive fixes, bug correction, landing pages, and web application features."
+  />
+  <div class="card-grid three">
+    {remoteStrengths.map((strength) => (
+      <article class="soft-card remote-card">
+        <div class="card-icon" aria-hidden="true">+</div>
+        <h3>{strength}</h3>
+      </article>
+    ))}
+  </div>
+</section>

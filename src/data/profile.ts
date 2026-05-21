@@ -1,18 +1,18 @@
 export const profile = {
   name: 'Wissal Saidi',
-  title: 'Software Engineering Student',
-  headline: 'Crafting smart digital futures',
+  title: 'Junior Frontend Developer',
+  headline: 'Crafting elegant digital experiences for modern teams',
   email: 'wissalsaidi00@gmail.com',
   location: 'Morocco',
-  experience: '3 years',
-  focus: 'Web Development',
-  status: 'Open to internships',
+  focus: 'Frontend Development',
+  availability: 'Remote / Hybrid',
+  status: 'Open to opportunities',
   domain: 'https://wissalsaidi.com',
   intro:
-    "I'm Wissal Saidi — a passionate software engineering student focused on web development, programming, and creating elegant digital experiences through continuous learning and discipline.",
+    "I'm Wissal Saidi - a junior software developer focused on building responsive, clean, and user-friendly web interfaces. I help teams create polished digital experiences with precision, consistency, and care.",
   about: [
-    "Hi, I'm Wissal Saidi — a motivated software engineering student with growing expertise in C++, Java OOP, PHP, MySQL, HTML, CSS, JavaScript, Tailwind, and React. I'm passionate about building impactful digital solutions while constantly sharpening my technical and creative skills.",
-    'My journey combines discipline, curiosity, and ambition. From mastering object-oriented programming to building real-world projects, I focus on becoming a developer who blends technical precision with thoughtful design.',
+    "Hi, I'm Wissal Saidi - a junior software developer with hands-on experience in HTML, CSS, JavaScript, React, Tailwind CSS, PHP, MySQL, Java, and C++. I focus on building clean, responsive, and practical digital solutions that are easy to use and maintain.",
+    "I'm looking for long-term opportunities where I can contribute to real projects, collaborate with professional teams, and grow through consistent, high-quality work.",
   ],
   socials: [
     {
@@ -30,20 +30,30 @@ export const skills = [
   {
     title: 'Frontend Development',
     description:
-      'Creating responsive, clean, and user-friendly websites with strong attention to structure and design.',
+      'Building responsive, clean, and user-friendly interfaces with strong attention to detail and visual consistency.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'React'],
   },
   {
-    title: 'Backend Development',
-    description: 'Building reliable web applications and structured database-driven solutions.',
+    title: 'Web Development',
+    description:
+      'Creating practical web solutions with structured code, database integration, and simple maintainable architecture.',
     technologies: ['PHP', 'MySQL', 'SQL', 'Node.js'],
   },
   {
-    title: 'Programming & OOP',
+    title: 'Software Fundamentals',
     description:
-      'Strengthening software engineering fundamentals through object-oriented design, problem-solving, and algorithmic thinking.',
-    technologies: ['C++', 'Java', 'OOP', 'Algorithms', 'Git'],
+      'Applying object-oriented programming, problem-solving, algorithms, and clean development practices.',
+    technologies: ['Java', 'C++', 'OOP', 'Algorithms', 'Git'],
   },
+];
+
+export const remoteStrengths = [
+  'Reliable communication',
+  'Clean responsive UI',
+  'Git-based workflow',
+  'Fast learner',
+  'Detail-oriented delivery',
+  'Open to feedback',
 ];
 
 export const projects = [
@@ -52,23 +62,23 @@ export const projects = [
     year: '2026',
     category: 'E-Commerce Web App',
     description:
-      'Developed a modern e-commerce website focused on product browsing, responsive design, and user experience using React and Tailwind CSS.',
+      'Built a responsive e-commerce interface focused on product browsing, clean layout, and smooth user experience using React and Tailwind CSS.',
     technologies: ['React', 'Tailwind CSS', 'JavaScript', 'Responsive Design'],
   },
   {
     title: 'StockUp',
     year: '2026',
-    category: 'Android App / Inventory',
+    category: 'Inventory Android App',
     description:
-      'Built an Android application designed to manage stock, organization, and product tracking with practical mobile-first functionality.',
+      'Developed a mobile inventory application for stock organization, product tracking, and practical business use cases.',
     technologies: ['Android', 'Java', 'Mobile UI', 'Inventory'],
   },
   {
     title: 'Beauty Salon Website',
     year: '2025',
-    category: 'Business Website / Full Stack',
+    category: 'Business Website',
     description:
-      'Created a complete salon website featuring service presentation, customer-friendly interface, and business-focused design using PHP, HTML, CSS, and Bootstrap.',
+      'Created a complete business website for a beauty salon, including service presentation, responsive pages, and a customer-friendly interface.',
     technologies: ['PHP', 'HTML', 'CSS', 'Bootstrap'],
   },
 ];

@@ -5,20 +5,21 @@ import { profile } from '@/data/profile';
 
 <BaseLayout
   title="Contact | Wissal Saidi"
-  description="Contact Wissal Saidi for internships, collaborations, junior software roles, and web development projects."
+  description="Contact Wissal Saidi for remote junior frontend developer opportunities, collaborations, internships, and web development projects."
 >
   <section class="page-hero contact-page">
     <p class="eyebrow">Contact</p>
-    <h1>Let's build something together.</h1>
+    <h1>Let's work together</h1>
     <p>
-      Have an internship, collaboration, or exciting project in mind? Let's connect and create
-      innovative digital solutions together.
+      I'm currently open to remote junior developer opportunities, internships, collaborations,
+      and long-term roles where I can contribute, learn, and grow with a professional team.
     </p>
     <div class="hero-actions">
-      <a class="button primary" href={`mailto:${profile.email}`}>{profile.email}</a>
+      <a class="button primary" href={`mailto:${profile.email}`}>Email me</a>
       {profile.socials.map((social) => (
         <a class="button ghost" href={social.href} target="_blank" rel="noreferrer">{social.label}</a>
       ))}
+      <a class="button ghost" href="/resume-wissal-saidi.pdf" download>Download CV</a>
     </div>
   </section>
 </BaseLayout>

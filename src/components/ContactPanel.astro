@@ -5,15 +5,17 @@ import { profile } from '@/data/profile';
 <section class="contact-panel" aria-labelledby="contact-title">
   <div>
     <p class="eyebrow">Contact</p>
-    <h2 id="contact-title">Let's build something together.</h2>
+    <h2 id="contact-title">Let's work together</h2>
     <p>
-      Have an internship, collaboration, or exciting project in mind? Let's connect and create
-      innovative digital solutions together.
+      I'm currently open to remote junior developer opportunities, internships, collaborations,
+      and long-term roles where I can contribute, learn, and grow with a professional team.
     </p>
   </div>
   <div class="contact-actions">
-    <a class="button primary" href={`mailto:${profile.email}`}>Email Wissal</a>
-    <a class="button ghost" href="/resume/">View Resume</a>
+    <a class="button primary" href={`mailto:${profile.email}`}>Email me</a>
+    {profile.socials.map((social) => (
+      <a class="button ghost" href={social.href} target="_blank" rel="noreferrer">{social.label}</a>
+    ))}
+    <a class="button ghost" href="/resume-wissal-saidi.pdf" download>Download CV</a>
   </div>
 </section>
-

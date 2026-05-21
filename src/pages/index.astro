@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import ContactPanel from '@/components/ContactPanel.astro';
 import Hero from '@/components/Hero.astro';
 import ProjectCard from '@/components/ProjectCard.astro';
+import RemoteCollaboration from '@/components/RemoteCollaboration.astro';
 import SectionHeader from '@/components/SectionHeader.astro';
 import SkillCard from '@/components/SkillCard.astro';
 import Stats from '@/components/Stats.astro';
@@ -15,7 +16,7 @@ import { profile, projects, skills } from '@/data/profile';
 
   <section class="content-band">
     <div class="split-layout">
-      <SectionHeader eyebrow="About" title="A developer who cares about the details." />
+      <SectionHeader eyebrow="About" title="A developer who works with clarity, discipline, and attention to detail." />
       <div class="prose">
         {profile.about.map((paragraph) => <p>{paragraph}</p>)}
       </div>
@@ -25,13 +26,15 @@ import { profile, projects, skills } from '@/data/profile';
   <section class="content-band">
     <SectionHeader
       eyebrow="Expertise"
-      title="Technical skills with a thoughtful design instinct."
-      text="Wissal blends web foundations, backend logic, and object-oriented programming into practical software projects."
+      title="What I can contribute remotely"
+      text="Wissal combines frontend implementation, practical web development, and strong software fundamentals for professional remote teams."
     />
     <div class="card-grid three">
       {skills.map((skill) => <SkillCard {...skill} />)}
     </div>
   </section>
+
+  <RemoteCollaboration />
 
   <section class="content-band">
     <SectionHeader
