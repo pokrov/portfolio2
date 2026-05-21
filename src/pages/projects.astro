@@ -1,0 +1,25 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContactPanel from '@/components/ContactPanel.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+import SectionHeader from '@/components/SectionHeader.astro';
+import { projects } from '@/data/profile';
+---
+
+<BaseLayout
+  title="Projects | Wissal Saidi"
+  description="Selected projects by Wissal Saidi, including ShopNStore, StockUp, and a Beauty Salon Website."
+>
+  <section class="page-hero">
+    <p class="eyebrow">Projects</p>
+    <h1>Selected work with polish and purpose.</h1>
+    <p>Web, mobile, and full-stack projects that show Wissal's growing software engineering practice.</p>
+  </section>
+  <section class="content-band">
+    <SectionHeader title="Featured projects" text="Each project is built around practical user needs, clean interfaces, and steady technical growth." />
+    <div class="card-grid three">
+      {projects.map((project) => <ProjectCard {...project} />)}
+    </div>
+  </section>
+  <ContactPanel />
+</BaseLayout>

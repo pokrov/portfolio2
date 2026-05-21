@@ -1,0 +1,21 @@
+{
+  "name": "Wissal Saidi Portfolio",
+  "short_name": "Wissal Saidi",
+  "description": "Portfolio of Wissal Saidi, software engineering student based in Morocco.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff8fb",
+  "theme_color": "#d9468f",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}

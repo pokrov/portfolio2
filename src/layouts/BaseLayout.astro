@@ -1,0 +1,70 @@
+---
+import { navItems, profile } from '@/data/profile';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+}
+
+const {
+  title = 'Wissal Saidi | Software Engineering Student',
+  description = 'Portfolio of Wissal Saidi, a software engineering student in Morocco focused on web development, programming, and elegant digital experiences.',
+  canonical = Astro.url.pathname,
+} = Astro.props;
+
+const canonicalUrl = new URL(canonical, profile.domain).toString();
+const imageUrl = new URL('/og-image.svg', profile.domain).toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={profile.name} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#fff1f7" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wissal Saidi Portfolio" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Wissal Saidi home">
+        <img src="/logo.png" alt="" width="56" height="56" />
+        <strong>Wissal Saidi</strong>
+      </a>
+      <nav aria-label="Primary navigation">
+        {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>Designed for {profile.name}. Built with Astro for {new Date().getFullYear()}.</p>
+      <div>
+        {profile.socials.map((social) => <a href={social.href} target="_blank" rel="noreferrer">{social.label}</a>)}
+        <a href={`mailto:${profile.email}`}>{profile.email}</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+---
+import Badge from './Badge.astro';
+
+interface Props {
+  title: string;
+  year: string;
+  category: string;
+  description: string;
+  technologies: string[];
+}
+
+const { title, year, category, description, technologies } = Astro.props;
+---
+
+<article class="soft-card project-card">
+  <div class="project-meta">
+    <span>{year}</span>
+    <span>{category}</span>
+  </div>
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <div class="tag-list" aria-label={`${title} technologies`}>
+    {technologies.map((tech) => <Badge label={tech} />)}
+  </div>
+</article>
+

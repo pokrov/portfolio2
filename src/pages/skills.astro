@@ -1,0 +1,25 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContactPanel from '@/components/ContactPanel.astro';
+import SectionHeader from '@/components/SectionHeader.astro';
+import SkillCard from '@/components/SkillCard.astro';
+import { skills } from '@/data/profile';
+---
+
+<BaseLayout
+  title="Skills | Wissal Saidi"
+  description="Explore Wissal Saidi's skills in frontend development, backend development, programming, and object-oriented software engineering."
+>
+  <section class="page-hero">
+    <p class="eyebrow">Skills</p>
+    <h1>Practical engineering skills with an elegant eye.</h1>
+    <p>Frontend, backend, and programming fundamentals organized around clean, useful digital experiences.</p>
+  </section>
+  <section class="content-band">
+    <SectionHeader title="Expertise" text="A focused toolkit for building responsive web products and reliable software foundations." />
+    <div class="card-grid three">
+      {skills.map((skill) => <SkillCard {...skill} />)}
+    </div>
+  </section>
+  <ContactPanel />
+</BaseLayout>

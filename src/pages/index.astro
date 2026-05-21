@@ -1,0 +1,48 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContactPanel from '@/components/ContactPanel.astro';
+import Hero from '@/components/Hero.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+import SectionHeader from '@/components/SectionHeader.astro';
+import SkillCard from '@/components/SkillCard.astro';
+import Stats from '@/components/Stats.astro';
+import { profile, projects, skills } from '@/data/profile';
+---
+
+<BaseLayout>
+  <Hero />
+  <Stats />
+
+  <section class="content-band">
+    <div class="split-layout">
+      <SectionHeader eyebrow="About" title="A developer who cares about the details." />
+      <div class="prose">
+        {profile.about.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="content-band">
+    <SectionHeader
+      eyebrow="Expertise"
+      title="Technical skills with a thoughtful design instinct."
+      text="Wissal blends web foundations, backend logic, and object-oriented programming into practical software projects."
+    />
+    <div class="card-grid three">
+      {skills.map((skill) => <SkillCard {...skill} />)}
+    </div>
+  </section>
+
+  <section class="content-band">
+    <SectionHeader
+      eyebrow="Projects"
+      title="Selected work shaped by curiosity and discipline."
+      text="A growing collection of web, mobile, and full-stack projects focused on useful experiences."
+    />
+    <div class="card-grid three">
+      {projects.map((project) => <ProjectCard {...project} />)}
+    </div>
+  </section>
+
+  <ContactPanel />
+</BaseLayout>

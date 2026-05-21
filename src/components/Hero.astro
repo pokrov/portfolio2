@@ -1,0 +1,35 @@
+---
+import { profile } from '@/data/profile';
+
+const codeSnippet = `const wissal = {
+  role: "Software Engineer",
+  focus: "Web Development",
+  mindset: "learn, build, refine",
+};`;
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow">Based in {profile.location}</p>
+    <h1 id="hero-title">
+      <span>{profile.name}</span>
+      {profile.headline}
+    </h1>
+    <p class="hero-title">{profile.title}</p>
+    <p class="hero-intro">{profile.intro}</p>
+    <div class="hero-actions">
+      <a class="button primary" href="/projects/">View my work</a>
+      <a class="button ghost" href="/contact/">Get in touch</a>
+    </div>
+  </div>
+  <div class="hero-visual" aria-label="Wissal Saidi portfolio summary">
+    <div class="code-window">
+      <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+      <pre><code>{codeSnippet}</code></pre>
+    </div>
+    <div class="orbital-card">
+      <span>Open to internships</span>
+      <strong>2026</strong>
+    </div>
+  </div>
+</section>

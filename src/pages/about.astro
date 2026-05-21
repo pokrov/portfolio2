@@ -1,0 +1,30 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContactPanel from '@/components/ContactPanel.astro';
+import SectionHeader from '@/components/SectionHeader.astro';
+import Stats from '@/components/Stats.astro';
+import { profile } from '@/data/profile';
+---
+
+<BaseLayout
+  title="About Wissal Saidi | Software Engineering Student"
+  description="Learn about Wissal Saidi, a motivated software engineering student in Morocco with skills in web development, OOP, and thoughtful digital design."
+>
+  <section class="page-hero">
+    <p class="eyebrow">About</p>
+    <h1>A developer who cares about the details.</h1>
+    <p>
+      Wissal is building her path through discipline, curiosity, and creative technical practice.
+    </p>
+  </section>
+  <Stats />
+  <section class="content-band">
+    <div class="split-layout">
+      <SectionHeader title="Growing through real practice." />
+      <div class="prose">
+        {profile.about.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </div>
+  </section>
+  <ContactPanel />
+</BaseLayout>

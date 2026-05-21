@@ -1,0 +1,22 @@
+---
+import { profile } from '@/data/profile';
+
+const stats = [
+  ['Based in', profile.location],
+  ['Experience', profile.experience],
+  ['Focus', profile.focus],
+  ['Status', profile.status],
+];
+---
+
+<section class="stats-grid" aria-label="Key portfolio information">
+  {
+    stats.map(([label, value]) => (
+      <article>
+        <span>{label}</span>
+        <strong>{value}</strong>
+      </article>
+    ))
+  }
+</section>
+

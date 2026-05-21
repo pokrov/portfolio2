@@ -1,0 +1,47 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContactPanel from '@/components/ContactPanel.astro';
+import SectionHeader from '@/components/SectionHeader.astro';
+import { profile, skills } from '@/data/profile';
+---
+
+<BaseLayout
+  title="Resume | Wissal Saidi"
+  description="Resume overview for Wissal Saidi, software engineering student open to internships, collaborations, and junior opportunities."
+>
+  <section class="page-hero resume-hero">
+    <p class="eyebrow">Resume</p>
+    <h1>Software engineering student open to opportunities.</h1>
+    <p>{profile.intro}</p>
+    <a class="button primary" href="/resume-wissal-saidi.pdf" download>Download Resume</a>
+  </section>
+  <section class="content-band">
+    <SectionHeader title="Profile snapshot" />
+    <div class="resume-grid">
+      <article class="soft-card">
+        <h3>Focus</h3>
+        <p>Web development, programming, object-oriented programming, and elegant digital experiences.</p>
+      </article>
+      <article class="soft-card">
+        <h3>Availability</h3>
+        <p>Open to internships, collaborations, and junior software opportunities.</p>
+      </article>
+      <article class="soft-card">
+        <h3>Location</h3>
+        <p>Based in Morocco and ready to contribute to ambitious teams and projects.</p>
+      </article>
+    </div>
+  </section>
+  <section class="content-band">
+    <SectionHeader title="Core skills" />
+    <div class="resume-list">
+      {skills.map((skill) => (
+        <article>
+          <h3>{skill.title}</h3>
+          <p>{skill.technologies.join(' · ')}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <ContactPanel />
+</BaseLayout>
