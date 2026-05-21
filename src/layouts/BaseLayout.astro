@@ -60,7 +60,7 @@ const imageUrl = new URL('/og-image.svg', profile.domain).toString();
       <slot />
     </main>
     <footer class="site-footer">
-      <p>Designed for {profile.name}. Built with Astro for {new Date().getFullYear()}.</p>
+      <p>Designed by {profile.name}.</p>
       <div>
         {profile.socials.map((social) => <a href={social.href} target="_blank" rel="noreferrer">{social.label}</a>)}
         <a href={`mailto:${profile.email}`}>{profile.email}</a>
